@@ -1,0 +1,28 @@
+<div>
+    <div class="add-product">
+        <h2>Add Products</h2>
+        <form action="">
+            <h3>Name: <input type="text" ng-model="product_name"></h3>
+            <h3>Price: <input type="text" ng-model="product_price"></h3>
+            <h3>Quantity: <input type="text" ng-model="product_quantity"></h3>
+            <button ng-click="addProduct(product_name, product_price, product_quantity)">Add Product</button>
+        </form>
+
+    </div>
+
+    <h2>Update Products</h2>
+    <div class="update-product" ng-repeat="product in products">
+        <h3>Name: {{product.name}} <input type="text" ng-model="product.name"></h3>
+        <h3>Price: {{product.price}} <input type="text" ng-model="product.price"></h3>
+        <h3>Quantity: {{product.quantity}} <input type="text" ng-model="product.quantity"></h3>
+
+        <button ng-click="updateProduct(product._id, product.name, product.price, product.quantity)">Update Product</button>
+
+    </div>
+
+    <h2>Delete Products</h2>
+    <div class="delete-product" ng-repeat="product in products">
+        <h3>{{product.name}} <button ng-click="deleteProduct(product._id)">Delete</button></h3>
+    </div>
+
+</div>
