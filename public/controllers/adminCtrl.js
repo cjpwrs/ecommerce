@@ -2,11 +2,12 @@
  * Created by cjpowers on 6/13/16.
  */
 angular.module('app').controller('adminCtrl', function($scope, adminService, productsService){
-    $scope.addProduct = function(name, price, quantity){
+    $scope.addProduct = function(title, description, price, image){
         var productObj = {
-            "name": name,
+            "title": title,
+            "description": description,
             "price": price,
-            "quantity": quantity
+            "image": image
         }
         adminService.addProduct(productObj)
             .then(function(response){
@@ -22,11 +23,12 @@ angular.module('app').controller('adminCtrl', function($scope, adminService, pro
             })
     }
 
-    $scope.updateProduct = function(id, name, price, quantity){
+    $scope.updateProduct = function(id, title, description, price, image){
         var newProductObj = {
-            "name": name,
+            "title": title,
+            "description": description,
             "price": price,
-            "quantity": quantity
+            "image": image
         }
         adminService.updateProduct(id, newProductObj)
             .then(function(response){

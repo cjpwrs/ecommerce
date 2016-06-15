@@ -1,5 +1,8 @@
-<div ng-repeat="product in products">
-    {{product.name}}
-    {{product.price}}
-    {{product.stock}}
+<div class="row">
+    <div class="col-sm-4" ng-repeat="product in products">
+        <img ng-src={{product.image}} alt="">
+        {{product.title}}<br>
+        {{product.description}}<br>
+        {{product.price}}
+    </div>
 </div>

@@ -1,7 +1,7 @@
 /**
  * Created by cjpowers on 6/13/16.
  */
-angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router', 'ngAnimate', 'ui.bootstrap'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('products', {
